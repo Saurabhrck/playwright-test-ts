@@ -4,4 +4,4 @@
 
 tasks:
   - init: npm install
-    command: npx playwright test --config=./playwright.config.ts --project="chrome:latest:Windows 10@lambdatest"
+    command: npm run test"
