@@ -5,4 +5,4 @@
 tasks:
   - name: Start Playwright
     init: npm install
-    command: npm run test
+    command: npx playwright install-deps && npm run test
