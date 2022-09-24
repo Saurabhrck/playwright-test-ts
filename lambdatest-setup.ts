@@ -2,10 +2,12 @@
  * Add the file in your test suite to run tests on LambdaTest.
  * Import `test` object from this file in the tests.
  */
-
 import * as base from "@playwright/test";
+import * as dotenv from "dotenv";
 import path from "path";
 import { chromium } from "playwright";
+
+dotenv.config();
 
 // LambdaTest capabilities
 const capabilities = {
@@ -22,7 +24,7 @@ const capabilities = {
     console: true,
     tunnel: false, // Add tunnel configuration if testing locally hosted webpage
     tunnelName: "", // Optional
-    geoLocation: '', // country code can be fetched from https://www.lambdatest.com/capabilities-generator/
+    geoLocation: "", // country code can be fetched from https://www.lambdatest.com/capabilities-generator/
   },
 };
 

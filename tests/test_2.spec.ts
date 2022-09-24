@@ -3,7 +3,10 @@ import { expect } from "@playwright/test";
 
 test.describe("Browse LambdaTest in different search engines", () => {
   test("Search LambdaTest Blog on Bing", async ({ page }) => {
-    await page.goto("https://www.bing.com");
+    await Promise.all([
+      page.goto("https://www.bing.com"),
+      page.waitForNavigation({ waitUntil: "domcontentloaded" }),
+    ]);
     const element = page.locator('[aria-label="Enter your search term"]');
     await element.click();
     await element.type("LambdaTest Blog");

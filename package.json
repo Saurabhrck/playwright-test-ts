@@ -7,15 +7,15 @@
   },
   "description": "Sample project to run playwright tests using playwright runner on LambdaTest platform",
   "scripts": {
-    "pretest": "npx playwright install",
     "test": "npx playwright test --config=./playwright.config.ts --project=\"chrome:latest:Windows 10@lambdatest\""
   },
   "dependencies": {
-    "@types/node": "18.7.18"
+    "@playwright/test": "1.24.2",
+    "dotenv": "^16.0.2",
+    "playwright": "1.24.2"
   },
   "devDependencies": {
-    "@playwright/test": "1.24.2",
-    "playwright": "1.24.2",
+    "@types/node": "18.7.18",
     "typescript": "4.8.3"
   }
 }
