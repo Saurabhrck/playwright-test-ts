@@ -7,7 +7,7 @@
   },
   "description": "Sample project to run playwright tests using playwright runner on LambdaTest platform",
   "scripts": {
-    "pretest": "npx playwright install",
+    "pretest": "sudo npx playwright install-deps && sudo npx playwright install",
     "test": "npx playwright test --config=./playwright.config.ts --project=\"chrome:latest:Windows 10@lambdatest\""
   },
   "dependencies": {
